@@ -14,23 +14,22 @@ fi
 export JAVA_HOME=$(/usr/libexec/java_home)
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
+export GOCF_HOME=/Users/chris/Documents/dev/workspace/cloudfoundry/cli/
+export CGH_HOME=~/Documents/dev/bin
 
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$RABBITMQ_HOME
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$RABBITMQ_HOME:$GOCF_HOME/out:$CGH_HOME
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 #OSX Shortcuts
 alias show-hidden-files='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
 alias hide-hidden-files='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
 
-alias single-instance='ssh 172.16.19.127'
-
 #Aliases
 alias webshare='python -m SimpleHTTPServer'
 alias dev='cd ~/Documents/dev/'
 alias workspace='cd ~/Documents/dev/workspace'
 alias groovyworkspace='cd ~/Documents/dev/workspace/groovy/'
-alias po-workspace='cd ~/Documents/dev/workspace/opencredo/po-rfl'
-alias cf-workspace='cd ~/Documents/dev/workspace/cloudfoundry'
+alias cf-release='cd ~/Documents/dev/workspace/cloudfoundry/releases/cf-release'
 alias opencredo='cd ~/Documents/dev/workspace/opencredo/'
 alias cloudcredo='cd ~/Documents/dev/workspace/cloudcredo/'
 alias bosh-1.5='rvm use ruby-1.9.3-p448; rvm gemset use bosh-1.5'
@@ -46,10 +45,7 @@ alias l="clear"
 alias source-profile="source ~/.profile"
 alias ls='ls -G'
 alias nettop="nettop -m tcp"
-
-function rmrf(){
-  rm -rf $1;
-}
+alias cp_dir="pwd | pbcopy"
 
 #Riak Alias
 alias riak-bucket='curl -i  http://localhost:8098/buckets?buckets=true; echo'

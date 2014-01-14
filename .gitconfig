@@ -17,6 +17,8 @@
         st = status
 	br = branch
 	ci = commit
+	co = checkout
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
 [url "https://github.com/"]
-	insteadOf = git://github.com/
+	insteadOf = git://github.com
