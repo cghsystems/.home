@@ -32,10 +32,13 @@ alias groovyworkspace='cd ~/Documents/dev/workspace/groovy/'
 alias cf-release='cd ~/Documents/dev/workspace/cloudfoundry/releases/cf-release'
 alias opencredo='cd ~/Documents/dev/workspace/opencredo/'
 alias cloudcredo='cd ~/Documents/dev/workspace/cloudcredo/'
-alias bosh-1.5='rvm use ruby-1.9.3-p448; rvm gemset use bosh-1.5'
-alias create-upload-release="bosh -n create release --force && bosh -n upload release"
+alias bosh-1.5='rvm use ruby-1.9.3-p484; rvm gemset use bosh-1.5'
 alias reset-vb="sudo /Library/StartupItems/VirtualBox/VirtualBox restart"
-alias tmux-dev="tmux new -s dev"
+alias tmux-dev="tmux new -s dev && cd /Users/chris/Documents/dev/workspace/tmux && ls"
+
+##Bosh
+alias watch-bosh='watch -n 20 bosh vms'
+alias create-upload-release="bosh -n create release --force && bosh -n upload release"
 
 #Shortcuts
 alias PS1="PS1='\W $ '"
