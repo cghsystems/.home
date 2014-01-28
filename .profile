@@ -34,7 +34,7 @@ alias opencredo='cd ~/Documents/dev/workspace/opencredo/'
 alias cloudcredo='cd ~/Documents/dev/workspace/cloudcredo/'
 alias bosh-1.5='rvm use ruby-1.9.3-p484; rvm gemset use bosh-1.5'
 alias reset-vb="sudo /Library/StartupItems/VirtualBox/VirtualBox restart"
-alias tmux-dev="tmux new -s dev && cd /Users/chris/Documents/dev/workspace/tmux && ls"
+alias tmux-dev="cd /Users/chris/Documents/dev/workspace/tmux && tmux new -As dev"
 
 ##Bosh
 alias watch-bosh='watch -n 20 bosh vms'
