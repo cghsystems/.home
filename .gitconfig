@@ -25,3 +25,5 @@
 	insteadOf = git://github.com
 [url "http://192.168.3.10:8080"]
 	insteadOf = ssh://jenkins@192.168.3.10:29418
+[credential] 
+        helper = cache

@@ -37,8 +37,7 @@ alias reset-vb="sudo /Library/StartupItems/VirtualBox/VirtualBox restart"
 alias tmux-dev="cd /Users/chris/Documents/dev/workspace/tmux && tmux new -As dev"
 
 ##Bosh
-alias watch-bosh='watch -n 20 bosh vms'
-alias create-upload-release="bosh -n create release --force && bosh -n upload release"
+alias cud="bosh -n create release --force && bosh -n upload release && bosh -n deploy"
 
 #Shortcuts
 alias PS1="PS1='\W $ '"
@@ -50,18 +49,23 @@ alias ls='ls -G'
 alias nettop="nettop -m tcp"
 alias cp_dir="pwd | pbcopy"
 
-#Riak Alias
-alias riak-bucket='curl -i  http://localhost:8098/buckets?buckets=true; echo'
-alias riak-keys='curl -i http://localhost:8098/buckets/riak-poc-groovy-bucket/keys?keys=true; echo'
-alias riak-keysstream='curl -i http://localhost:8098/buckets/riak-poc-groovy-bucket/keys?keys=stream; echo'
-alias riak-clear='riak stop; rm -rf /usr/local/Cellar/riak/1.3.1-x86_64/libexec/data; riak start;'
+#Docker (Vagrant)
+export DOCKER_HOST=tcp://192.168.59.103:2375
+export DOCKER_TLS_VERIFY=1
+export DOCKER_CERT_PATH=/Users/chris/.boot2docker/certs/boot2docker-vm
 
-function riak-fetch(){
-  curl -i http://localhost:8098/buckets/$1/keys/$2; echo
-}
+#chruby
+source '/usr/local/share/chruby/chruby.sh'
+source '/usr/local/share/chruby/auto.sh'
 
-#RVM and GVM initalisation
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+#GO LANG
+export GO_PATH=~/workspace/gocode
+export GOPATH=~/workspace/gocode
+export PATH=/Users/chris/workspace/gocode/bin/:$PATH
 
+#GVM initalisation
 #THIS MUST BE AT THE END OF THE FILE FOR GVM TO WORK!!!
 [[ -s "/Users/chris/.gvm/bin/gvm-init.sh" ]] && source "/Users/chris/.gvm/bin/gvm-init.sh"
+
+#GVM
+source "/Users/chris/.gvm/bin/gvm-init.sh"
