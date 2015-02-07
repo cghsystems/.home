@@ -8,12 +8,10 @@
 
 goto()
 {
-    local p;
     local f;
     f=`find ${GOPATH}/src -type d -name "${1}" | awk '{ print length, $0 }' | sort -n | cut -d" " -f2- | head -n 1`;
-    # echo  -n $f ]
     if [ -n "$f" ]; then
-    ls  $f
+        ls  $f
         cd $f;
         return;
     fi;
@@ -22,10 +20,10 @@ goto()
  
 workto ()
 {
-    local p;
     local f;
-    f=`find ~/workspace -type d -not -path '*/.*' | grep "${1}" | awk '{ print length, $0 }' | sort -n | cut -d" " -f2- | head -n 1`;
+    f=`find ~/workspace/ -type d -name "${1}" | awk '{ print length, $0 }' | sort -n | cut -d" " -f2- | head -n 1`;
     if [ -n "$f" ]; then
+        ls  $f
         cd $f;
         return;
     fi
