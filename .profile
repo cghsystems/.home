@@ -35,6 +35,8 @@ alias cloudcredo='cd ~/Documents/dev/workspace/cloudcredo/'
 alias bosh-1.5='rvm use ruby-1.9.3-p484; rvm gemset use bosh-1.5'
 alias reset-vb="sudo /Library/StartupItems/VirtualBox/VirtualBox restart"
 alias tmux-dev="cd /Users/chris/Documents/dev/workspace/tmux && tmux new -As dev"
+alias vi="/usr/local/Cellar/vim/7.4.488/bin/vim"
+alias vim="vi"
 
 ##Bosh
 alias cud="bosh -n create release --force && bosh -n upload release && bosh -n deploy"
@@ -48,6 +50,10 @@ alias source-profile="source ~/.profile"
 alias ls='ls -G'
 alias nettop="nettop -m tcp"
 alias cp_dir="pwd | pbcopy"
+
+goto() {
+   . ~/bin/cd_to_project $@ 
+}
 
 #Docker (Vagrant)
 export DOCKER_HOST=tcp://192.168.59.103:2375

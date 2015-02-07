@@ -1,0 +1,34 @@
+#!/bin/bash
+
+#
+# file: goto
+# desc: A simple script that will quickly change the current working directory to a workspace or gopath project.
+# usage: . goto 'project dir name'
+#
+
+goto()
+{
+    local p;
+    local f;
+    f=`find ${GOPATH}/src -type d -name "${1}" | awk '{ print length, $0 }' | sort -n | cut -d" " -f2- | head -n 1`;
+    # echo  -n $f ]
+    if [ -n "$f" ]; then
+    ls  $f
+        cd $f;
+        return;
+    fi;
+    workto "$@"
+}
+ 
+workto ()
+{
+    local p;
+    local f;
+    f=`find ~/workspace -type d -not -path '*/.*' | grep "${1}" | awk '{ print length, $0 }' | sort -n | cut -d" " -f2- | head -n 1`;
+    if [ -n "$f" ]; then
+        cd $f;
+        return;
+    fi
+}
+
+goto $1
