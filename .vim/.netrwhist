@@ -1,8 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/Users/chris/Documents/dev/workspace/opencredo/postoffice/cloudfoundry/cloudfoundry-release/src/hm9000'
 let g:netrw_dirhist_2='/Users/chris/Documents/dev/workspace/opencredo/postoffice/cloudfoundry/cassandra-release/blobs'
 let g:netrw_dirhist_3='/Users/chris/Documents/dev/workspace/opencredo/postoffice/cloudfoundry/java-buildpack/podeploy-shared'
 let g:netrw_dirhist_4='/Users/chris'
 let g:netrw_dirhist_5='/Users/chris/.vim/bundle'
 let g:netrw_dirhist_6='/Users/chris/Documents/dev/workspace/gocode/src/github.com/gosum'
+let g:netrw_dirhist_7='/System/Library/Frameworks/Python.framework/Versions'

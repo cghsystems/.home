@@ -3,9 +3,9 @@ set term=builtin_ansi
 filetype plugin indent on
 
 syntax enable
-set background=dark
-colorscheme solarized
-let g:solarized_termcolors=256
+" set background=dark
+" colorscheme solarized
+" let g:solarized_termcolors=256
 
 call pathogen#infect() 
 
