@@ -31,3 +31,7 @@ nnoremap <leader>n :NERDTreeToggle<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 nmap <silent> <leader>, :b#<CR>
 cmap  w!! w !sudo tee % >
+
+" Status line (:help status-line)
+set laststatus=2 " Always set a status line
+set statusline=%f%m%r\ %y\ [%l,%v]\ [len=%L] 
