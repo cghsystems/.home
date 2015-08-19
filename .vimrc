@@ -6,9 +6,10 @@ syntax enable
 
 let g:hybrid_use_Xresources = 1
 colorscheme hybrid
+hi clear SignColumn
+hi StatusLine ctermfg=Grey
 
 call pathogen#infect() 
-
 
 let mapleader=","
 set tabstop=2
@@ -16,6 +17,9 @@ set nu
 set paste
 set ignorecase
 set smartcase
+set noshowmode
+" So that we don't have to save between saves
+set hidden
 
 set visualbell
 set noerrorbells 
@@ -29,7 +33,6 @@ let g:go_fmt_command = "goimports"
 let g:go_snippet_engine = "neosnippet"
 
 " Key bindings
-
 nnoremap <leader>n :NERDTreeToggle<CR>
 
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
@@ -49,12 +52,19 @@ cmap  w!! w !sudo tee % >
 "   %c Column number.
 "   %P percentage through buffer
 set laststatus=2 " Always set a status line
-set statusline=%{fugitive#statusline()}\ %f%m%r\ %y\ %=[%l,%v]\ [:%L] 
+set statusline=%{fugitive#statusline()}:\ %f%m%r\ %y\ %=[%l,%v]\ [:%L] 
 
 " Set status bar to Red in insert mode
-au InsertEnter * hi StatusLine ctermfg=Red
+au InsertEnter * hi StatusLine ctermfg=Green
 au InsertLeave * hi StatusLine ctermfg=Grey
 
-" So that we don't have to save between saves
-set hidden
 
+" disable arrow keys
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>

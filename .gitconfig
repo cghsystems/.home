@@ -8,22 +8,14 @@
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
 [push]
 	default = simple
 [alias]
-        st = status
+  st = status
 	br = branch
 	ci = commit
 	co = checkout
 	conflict = diff --name-only --diff-filter=U
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-
-[url "https://github.com"]
-	insteadOf = git://github.com
-[url "http://192.168.3.10:8080"]
-	insteadOf = ssh://jenkins@192.168.3.10:29418
 [credential] 
-        helper = cache
+  helper = cache
