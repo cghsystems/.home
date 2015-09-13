@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set eu
+
+ln -s ~/.cgh/.profile ~/.profile
+ln -s ~/.cgh/.profile ~/.gitignore
+ln -s ~/.cgh/.gitconfig ~/.gitconfig
+ln -s ~/.cgh/.vimrc ~/.vimrc
+ln -s ~/.cgh/.rspec ~/.rspec
