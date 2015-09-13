@@ -3,6 +3,7 @@
 	email = chris@cghsystems.net
 [core]
 	excludesfile = /Users/chris/.gitignore_global
+	autocrlf = input
 [color]
 	ui = true
 [difftool "sourcetree"]
