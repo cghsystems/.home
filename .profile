@@ -10,7 +10,7 @@ export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export CGH_HOME=~/bin
 
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$CGH_HOME
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$CGH_HOME:/$GOPATH/bin:
 
 #OSX Shortcuts
 alias show-hidden-files='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
@@ -39,10 +39,5 @@ goto() {
 
 ##Bosh
 alias gfd="bosh -n create release --force && bosh -n upload release && bosh -n deploy"
-
-#GO LANG
-export GO_PATH=~/workspace/gocode
-export GOPATH=~/workspace/gocode
-export PATH=/Users/chris/workspace/gocode/bin/:$PATH
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
