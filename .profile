@@ -9,6 +9,7 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export CGH_HOME=~/bin
+export GOPATH=/Users/cloudcredo/workspace/gocode
 
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$CGH_HOME:/$GOPATH/bin:
 
