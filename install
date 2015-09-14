@@ -7,3 +7,4 @@ ln -s ~/.cgh/.profile ~/.gitignore
 ln -s ~/.cgh/.gitconfig ~/.gitconfig
 ln -s ~/.cgh/.vimrc ~/.vimrc
 ln -s ~/.cgh/.rspec ~/.rspec
+ln -s ~/.cgh/.tmux.conf ~/.tmux.conf
