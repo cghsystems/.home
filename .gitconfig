@@ -18,6 +18,7 @@
 	co = checkout
 	conflict = diff --name-only --diff-filter=U
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	show-git-files = ls-tree -r master --name-only
 [credential] 
   helper = cache
 [url "git@github.com:"]
