@@ -39,5 +39,6 @@ goto() {
 
 ##Bosh
 alias gfd="bosh -n create release --force && bosh -n upload release && bosh -n deploy"
+export BOSH_USE_BUNDLER=true
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
