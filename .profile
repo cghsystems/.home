@@ -2,7 +2,6 @@ export HISTFILESIZE=500000
 export HISTSIZE=10000
 export HISTCONTROL="erasedups:ignoreboth"
 
-export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
 export LESS=' -R '
 
 export JAVA_HOME=$(/usr/libexec/java_home)
