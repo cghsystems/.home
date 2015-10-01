@@ -32,6 +32,7 @@ alias l="clear"
 alias ls='ls -G'
 alias nettop="nettop -m tcp"
 alias cp_dir="pwd | pbcopy"
+alias add_key="/Volumes/ChrisHedley/add_key"
 
 goto() {
    . ~/bin/cd_to_project $@ 
