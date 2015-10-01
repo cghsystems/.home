@@ -21,6 +21,7 @@
 	show-git-files = ls-tree -r master --name-only
 	r = pull --rebase
 	p = push
+	pci = pair-commit
 [credential] 
   helper = cache
 [url "git@github.com:"]
