@@ -28,12 +28,16 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 
+setlocal spell spelllang=en_us
+hi SpellBad cterm=underline
+
 " go shortcuts`
 let g:go_fmt_command = "goimports"
 let g:go_snippet_engine = "neosnippet"
 
 " Key bindings
 nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>s :set spell<CR>
 
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 nmap <silent> <leader>, :b#<CR>
