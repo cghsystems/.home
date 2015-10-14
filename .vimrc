@@ -3,13 +3,13 @@ set term=builtin_ansi
 filetype plugin indent on
 
 syntax enable
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
 let g:hybrid_use_Xresources = 1
 colorscheme hybrid
 hi clear SignColumn
 hi StatusLine ctermfg=Grey
 
-call pathogen#infect() 
 
 let mapleader=","
 set tabstop=2
@@ -27,7 +27,10 @@ set noerrorbells
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+set colorcolumn=80
 
+
+" Spell Checking
 setlocal spell spelllang=en_us
 hi SpellBad cterm=underline
 
@@ -37,7 +40,15 @@ let g:go_snippet_engine = "neosnippet"
 
 " Key bindings
 nnoremap <leader>n :NERDTreeToggle<CR>
+" Turn on spell checking
 nnoremap <leader>s :set spell<CR>
+" Switch on Print margin
+nnoremap <leader>m :highlight ColorColumn ctermbg=black<CR>
+"Cycle buffers
+:nnoremap <Tab> :bnext<CR>
+:nnoremap <S-Tab> :bprevious<CR>
+"List buffers
+:nnoremap <leader>t :ls<CR>
 
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 nmap <silent> <leader>, :b#<CR>
@@ -62,6 +73,15 @@ set statusline=%{fugitive#statusline()}:\ %f%m%r\ %y\ %=[%l,%v]\ [:%L]
 au InsertEnter * hi StatusLine ctermfg=Green
 au InsertLeave * hi StatusLine ctermfg=Grey
 
+set wildmenu " visual autocomplete for command menu
+set showmatch  " highlight matching [{()}]
+
+" search as characters are entered
+set incsearch 
+" Should highlight all search results
+set hlsearch  
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
 
 " disable arrow keys
 map <up> <nop>
@@ -72,3 +92,6 @@ imap <up> <nop>
 imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
+
+
+call pathogen#infect()
