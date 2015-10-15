@@ -2,6 +2,7 @@ call pathogen#infect()
 
 " Syntax Highlighting {{{
 set term=builtin_ansi
+" Load filetype-specific indent files
 filetype plugin indent on
 
 syntax enable
@@ -65,6 +66,7 @@ set noerrorbells
 
 " Tabs {{{
 set tabstop=2
+" Tabs are spaces
 set expandtab
 set shiftwidth=2
 set softtabstop=2

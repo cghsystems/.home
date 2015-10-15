@@ -2,9 +2,9 @@
 
 set eu
 
-ln -s ~/.cgh/.profile ~/.profile
-ln -s ~/.cgh/.profile ~/.gitignore
-ln -s ~/.cgh/.gitconfig ~/.gitconfig
-ln -s ~/.cgh/.vimrc ~/.vimrc
-ln -s ~/.cgh/.rspec ~/.rspec
-ln -s ~/.cgh/.tmux.conf ~/.tmux.conf
+ln -fs ~/.cgh/dotfiles/profile ~/.profile
+ln -fs ~/.cgh/dotfiles/profile ~/.gitignore
+ln -fs ~/.cgh/dotfiles/gitconfig ~/.gitconfig
+ln -fs ~/.cgh/dotfiles/vimrc ~/.vimrc
+ln -fs ~/.cgh/dotfiles/rspec ~/.rspec
+ln -fs ~/.cgh/dotfiles/tmux.conf ~/.tmux.conf
