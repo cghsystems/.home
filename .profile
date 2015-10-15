@@ -53,4 +53,4 @@ export BOSH_USE_BUNDLER=true
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 # }}}
 
-" vim:foldmethod=marker:foldlevel=0
+# vim:foldmethod=marker:foldlevel=0
