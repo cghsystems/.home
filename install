@@ -3,7 +3,7 @@
 set eu
 
 ln -fs ~/.cgh/dotfiles/profile ~/.profile
-ln -fs ~/.cgh/dotfiles/profile ~/.gitignore
+ln -fs ~/.cgh/dotfiles/gitignore ~/.gitignore
 ln -fs ~/.cgh/dotfiles/gitconfig ~/.gitconfig
 ln -fs ~/.cgh/dotfiles/vimrc ~/.vimrc
 ln -fs ~/.cgh/dotfiles/rspec ~/.rspec
