@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set eu
+
+ls -al ~/.cgh/dotfiles/profile
+ls -al ~/.cgh/dotfiles/gitignore
+ls -al ~/.cgh/dotfiles/gitconfig
+ls -al ~/.cgh/dotfiles/vimrc
+ls -al ~/.cgh/dotfiles/rspec
+ls -al ~/.cgh/dotfiles/tmux.conf
