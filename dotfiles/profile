@@ -35,6 +35,11 @@ alias kc='kubectl config'
 alias kd='kubectl describe'                                                    
 alias kga='kubectl get all --all-namespaces'
 alias kge='kubectl get events'
+
+#k8s Bash completion
+source <(kubectl completion bash) 
+source <(kubectl completion bash | sed 's/kubectl/k/g')
+
 # }}}
 
 # Shortcuts {{{
