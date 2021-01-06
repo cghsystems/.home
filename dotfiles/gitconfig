@@ -1,6 +1,6 @@
 [user]
 	name = Chris Hedley
-	email = chris@cloudcredo.com
+	email = chris@cghsystems.net
 	initials = cgh
 [core]
 	excludesfile = ~/.gitignore
