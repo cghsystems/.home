@@ -40,6 +40,10 @@ alias kge='kubectl get events'
 source <(kubectl completion bash) 
 source <(kubectl completion bash | sed 's/kubectl/k/g')
 
+#tekton completion 
+source <(tkn completion bash)
+
+
 # }}}
 
 # Shortcuts {{{
