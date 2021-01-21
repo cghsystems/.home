@@ -13,8 +13,11 @@ shopt -s cdspell 2> /dev/null
 # Better navigation
 shopt -s cdable_vars
 alias home='cd ~'
+
+# Easier profile editing
 alias editprofile='vi ~/.profile'
 alias sourceprofile='source ~/.profile'
+alias commit_profile='git add ~/.cgh/dotfiles/profile && git ci -m'
 
 export cgh=~/.cgh
 export syn=~/workspace/hpft
