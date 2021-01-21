@@ -35,3 +35,4 @@ set t_vb=
 set noerrorbells
 
 set confirm
+colorscheme light
