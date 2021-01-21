@@ -12,6 +12,7 @@ shopt -s cdspell 2> /dev/null
 
 # Better navigation
 shopt -s cdable_vars
+shopt -s dirspell
 alias home='cd ~'
 
 # Easier profile editing
