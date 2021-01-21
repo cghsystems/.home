@@ -12,6 +12,9 @@ shopt -s cdspell 2> /dev/null
 
 # Better navigation
 shopt -s cdable_vars
+alias home='cd ~'
+alias editprofile='vi ~/.profile'
+alias sourceprofile='source ~/.profile'
 
 export cgh=~/.cgh
 export syn=~/workspace/hpft
