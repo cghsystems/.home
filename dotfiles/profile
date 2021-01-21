@@ -1,7 +1,21 @@
 # Path {{{
 export LESS=' -R '
 
-#export JAVA_HOME=$(/usr/libexec/java_home)
+# Better directory navigation 
+# Prepend cd to directory names automatically
+shopt -s autocd 2> /dev/null
+# Correct spelling errors during tab-completion
+shopt -s dirspell 2> /dev/null
+# Correct spelling errors in arguments supplied to cd
+shopt -s cdspell 2> /dev/null
+
+
+# Better navigation
+shopt -s cdable_vars
+
+export cgh=~/.cgh
+export syn=~/workspace/hpft
+export dotfiles=$cgh/dotfiles
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export CGH_HOME=~/bin
@@ -22,6 +36,7 @@ alias hide-hidden-files='defaults write com.apple.finder AppleShowAllFiles FALSE
 # }}}
 
 # Aliases {{{
+alias ll='ls -la'
 alias webshare='python -m SimpleHTTPServer'
 alias workspace='cd ~/Documents/workspace'
 # }}}
