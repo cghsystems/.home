@@ -26,10 +26,12 @@ export dotfiles=$cgh/dotfiles
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 export CGH_HOME=~/bin
-export GOPATH=/Users/cgh/workspace/gocode
 
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:$CGH_HOME:/$GOPATH/bin:
-# }}}
+#Golang 
+export GOPATH=~/workspace/gocode
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOROOT/bin
+export PATH=$PATH:$GOPATH/bin
 
 # History {{{
 export HISTFILESIZE=500000
