@@ -59,6 +59,7 @@ alias kc='kubectl config'
 alias kd='kubectl describe'                                                    
 alias kga='kubectl get all --all-namespaces'
 alias kge='kubectl get events'
+alias kind-reset='kind delete cluster && kind create cluster'
 
 #k8s Bash completion
 source <(kubectl completion bash) 
