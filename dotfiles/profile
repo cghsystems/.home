@@ -82,7 +82,6 @@ alias l="clear"
 alias ls='ls -G'
 alias cp_dir="pwd | pbcopy"
 alias add_key="/Volumes/ChrisHedley/add_key"
-alias cat=bat
 
 goto() {
    . ~/bin/cd_to_project $@ 
