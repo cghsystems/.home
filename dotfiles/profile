@@ -21,7 +21,8 @@ alias sourceprofile='source ~/.profile'
 alias commit_profile='git add ~/.cgh/dotfiles/profile && git ci -m'
 
 export cgh=~/.cgh
-export syn=~/workspace/hpft
+export syn=~/workspace/syntasso
+export syntasso=~/workspace/syntasso
 export dotfiles=$cgh/dotfiles
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
@@ -32,6 +33,7 @@ export GOPATH=~/workspace/gocode
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/kubebuilder/bin
 
 # History {{{
 export HISTFILESIZE=500000
@@ -60,6 +62,7 @@ alias kd='kubectl describe'
 alias kga='kubectl get all --all-namespaces'
 alias kge='kubectl get events'
 alias kind-reset='kind delete cluster && kind create cluster'
+alias kgcrs='for crd in `k get crds -A | grep -v NAME | awk '\''{print $1}'\''`; do echo '\'''\''; echo $crd; k get $crd -A; done'
 
 #k8s Bash completion
 source <(kubectl completion bash) 
@@ -72,7 +75,7 @@ source <(tkn completion bash)
 # }}}
 
 # Shortcuts {{{
-alias PS1="PS1='\W $ '"
+alias PS1="PS1='\W $\n'"
 alias g="git"
 alias h="history"
 alias l="clear"
