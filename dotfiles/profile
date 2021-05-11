@@ -62,6 +62,7 @@ alias kd='kubectl describe'
 alias kga='kubectl get all --all-namespaces'
 alias kge='kubectl get events'
 alias kind-reset='kind delete cluster && kind create cluster'
+alias kind-delete-all='for i in $(kind get clusters); do $(kind delete cluster --name=$i) ; done'
 alias kgcrs='for crd in `k get crds -A | grep -v NAME | awk '\''{print $1}'\''`; do echo '\'''\''; echo $crd; k get $crd -A; done'
 
 #k8s Bash completion
