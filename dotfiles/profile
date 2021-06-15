@@ -68,6 +68,7 @@ alias kgcrs='for crd in `k get crds -A | grep -v NAME | awk '\''{print $1}'\''`;
 #k8s Bash completion
 source <(kubectl completion bash) 
 source <(kubectl completion bash | sed 's/kubectl/k/g')
+complete -W "\`grep -oE '^[a-zA-Z0-9_.-]+:([^=]|$)' ?akefile | sed 's/[^a-zA-Z0-9_.-]*$//'\`" make
 
 #tekton completion 
 source <(tkn completion bash)
