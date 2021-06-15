@@ -13,7 +13,7 @@
 [push]
 	default = simple
 [alias]
-  st = status
+        st = status
 	br = branch
 	ci = commit
 	co = checkout
@@ -22,7 +22,7 @@
 	show-git-files = ls-tree -r master --name-only
 	r = pull --rebase
 	p = push
-	pci = pair-commit
+	duet-ci = duet-commit
 [credential] 
   helper = cache
 [url "git@github.com:"]
